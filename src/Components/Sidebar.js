@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import logo from "../img/soundshare.png";
 
 const Sidebar = ({ sidebarItems }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  // const [activeIndex, setActiveIndex] = useState(null);
 
-  const onTitleClick = (index) => {
-    setActiveIndex(index);
-  };
+  // const onTitleClick = (index) => {
+  //   setActiveIndex(index);
+  // };
 
   return (
     <div className="sidebar">
