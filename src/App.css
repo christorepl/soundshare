@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+table {
+  display: grid;
+  border-collapse: collapse;
+  /* These are just initial values which are overriden using JavaScript when a column is resized */
+  grid-template-columns:
+    minmax(40px, 0.33fr)
+    minmax(170px, 1.67fr)
+    minmax(60px, 1.67fr)
+    minmax(180px, 1.67fr)
+    minmax(130px, 1.8fr)
+    minmax(100px, 1.33fr)
+    minmax(40px, 0.67fr);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+thead,
+tbody,
+tr {
+  display: contents;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+th,
+td {
+  padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: white;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: black;
+  position: relative;
+}
+
+th:last-child {
+  border: 0;
+}
+
+.resize-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0;
+  width: 3px;
+  cursor: col-resize;
+}
+
+/* The following selector is needed so the handle is visible during resize even if the mouse isn't over the handle anymore */
+.resize-handle:hover,
+.header--being-resized .resize-handle {
+  opacity: 0.5;
+}
+
+th:hover .resize-handle {
+  opacity: 0.3;
+}
+
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #808080;
+}
+
+tr td {
+  padding: 20px;
+  margin-top: 10px;
+  background: white;
+}
+
+@media screen and (min-width: 40em) {
+  .body {
+    background-color: rgb(146, 146, 146);
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar img {
+    width: 100%;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0px;
+  }
+
+  .sidebar li a {
+    display: block;
+    background-color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 2em 0em 0em 2em;
+  }
+
+  /* .sidebar li button:hover {
+    list-style: square;
+  } */
+
+  /* .sidebar li button {
+    padding: 3em;
+    border: 0px solid red;
+    width: 100%;
+    background-color: white;
+  } */
+
+  li[class="active"] {
+    background-color: green;
+  }
+
+  .mainPage {
+    width: calc(100vw - 250px);
+    background-color: rgb(238, 238, 238);
+    left: 250px;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .mainField {
+    position: relative;
+    height: auto;
+  }
+
+  .page {
+    padding: 5em;
   }
 }
