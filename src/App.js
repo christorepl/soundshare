@@ -74,6 +74,8 @@ const fileItems = [
   },
 ];
 
+let fileItems = [];
+
 const App = () => {
   return (
     <div className="app">

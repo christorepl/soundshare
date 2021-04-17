@@ -1,28 +1,27 @@
 import React from "react";
 
 const AllFiles = ({ fileItems }) => {
-  console.log(fileItems[0].name);
+  const renderedItems =
+    fileItems.length > 0
+      ? fileItems.map((item, index) => {
+          return (
+            <tr className="active">
+              <td>
+                <input type="checkbox" value={index} />
+              </td>
+              <td>{item.name}</td>
+              <td>{item.type}</td>
+              <td>{item.sharing}</td>
+              <td>{item.date}</td>
+              <td>{item.size}</td>
+              <td>...</td>
+            </tr>
+          );
+        })
+      : [];
 
-  const renderedItems = fileItems.map((item, index) => {
-    return (
-      <tr className="active">
-        <td>
-          <input type="checkbox" value={index} />
-        </td>
-        <td>{item.name}</td>
-        <td>{item.type}</td>
-        <td>{item.sharing}</td>
-        <td>{item.date}</td>
-        <td>{item.size}</td>
-        <td>...</td>
-      </tr>
-    );
-  });
-
-  console.log(renderedItems);
-
-  return (
-    <div className="files">
+  return renderedItems.length > 0 ? (
+    <>
       <h1>All Files</h1>
       <table>
         <tr>
@@ -36,25 +35,13 @@ const AllFiles = ({ fileItems }) => {
         </tr>
         {renderedItems}
       </table>
+    </>
+  ) : (
+    <>
+      <h1>All Files</h1>
 
-      {/* <table>
-        <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
-        </tr>
-        <tr>
-          <td>Peter</td>
-          <td>Griffin</td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" ng-model="x.dedbuffer" />
-          </td>
-
-          <td>Griffin</td>
-        </tr>
-      </table> */}
-    </div>
+      <div>No files</div>
+    </>
   );
 };
 
