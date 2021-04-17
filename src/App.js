@@ -74,7 +74,7 @@ const fileItems = [
   },
 ];
 
-let fileItems = [];
+// let fileItems = [];
 
 const App = () => {
   return (

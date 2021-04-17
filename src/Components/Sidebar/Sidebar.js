@@ -32,4 +32,3 @@ const Sidebar = ({ sidebarItems }) => {
 };
 
 export default Sidebar;
-//edit
