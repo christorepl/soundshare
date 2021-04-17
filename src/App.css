@@ -4,11 +4,11 @@ table {
   /* These are just initial values which are overriden using JavaScript when a column is resized */
   grid-template-columns:
     minmax(40px, 0.33fr)
-    minmax(170px, 1.67fr)
-    minmax(60px, 1.67fr)
-    minmax(180px, 1.67fr)
-    minmax(130px, 1.8fr)
-    minmax(100px, 1.33fr)
+    minmax(170px, 10fr)
+    minmax(68px, 0.55fr)
+    minmax(180px, 1fr)
+    minmax(130px, 0.05fr)
+    minmax(100px, 0.33fr)
     minmax(40px, 0.67fr);
 }
 
@@ -92,31 +92,32 @@ tr td {
   }
 
   .sidebar ul {
+    background-color: white;
     list-style: none;
-    padding: 0px;
+    padding: 0;
+    font-size: 12px;
   }
 
   .sidebar li a {
     display: block;
-    background-color: white;
+    color: black;
+    margin-left: 0;
+    background: white;
     text-decoration: none;
-    font-size: 1.5em;
-    padding: 2em 0em 0em 2em;
+    font-size: 1.25em;
+    padding: 1em 0 1em 2em;
   }
 
-  /* .sidebar li button:hover {
-    list-style: square;
-  } */
+  .sidebar li[class="active"] a {
+    background: green;
+    color: white;
+  }
 
-  /* .sidebar li button {
-    padding: 3em;
-    border: 0px solid red;
-    width: 100%;
-    background-color: white;
-  } */
-
-  li[class="active"] {
-    background-color: green;
+  .fa-circle {
+    color: white;
+    padding-right: 2em;
+    padding-bottom: 0.5em;
+    padding-top: 0.05em;
   }
 
   .mainPage {
