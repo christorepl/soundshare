@@ -23,9 +23,7 @@ const Sidebar = ({ sidebarItems }) => {
 
   return (
     <div className="sidebar">
-      <Link to="/">
-        <img src={logo} alt="soundshare logo" />
-      </Link>
+      <img src={logo} alt="soundshare logo" />
       <ul>{renderedNavList}</ul>
     </div>
   );
