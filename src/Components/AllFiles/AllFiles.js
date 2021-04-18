@@ -11,7 +11,13 @@ const AllFiles = ({ fileItems }) => {
               </td>
               <td>{item.name}</td>
               <td>{item.type}</td>
-              <td>{item.sharing}</td>
+              <td>
+                {item.sharing.length >= 4
+                  ? `${item.sharing[0]}, ${item.sharing[1]}, ${
+                      item.sharing[2]
+                    } +${item.sharing.length - 3} more`
+                  : item.sharing.join(", ")}
+              </td>
               <td>{item.date}</td>
               <td>{item.size}</td>
               <td>...</td>

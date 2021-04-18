@@ -4,7 +4,7 @@ table {
   /* These are just initial values which are overriden using JavaScript when a column is resized */
   grid-template-columns:
     minmax(40px, 0.33fr)
-    minmax(170px, 10fr)
+    minmax(150px, 2fr)
     minmax(68px, 0.55fr)
     minmax(180px, 1fr)
     minmax(130px, 0.05fr)
