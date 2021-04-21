@@ -38,7 +38,7 @@ const sidebarItems = [
 const fileItems = [
   {
     name:
-      "Really big long name that will take up space because it's a big long nameeeeeeeeeee",
+      "The +2 more part in the sharing column is conditional rendering, it's not hardcoded.",
     type: "wav",
     sharing: ["Jenn", "Josh", "Jake", "Jeff", "Jasmine"],
     size: "869mb",
