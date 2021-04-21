@@ -30,6 +30,7 @@ function Dashboard() {
           type="file"
           multiple="multiple" //To select multiple files
           // accept=".jpg"
+          accept=".mp3, .wav, .wave, .flac, .ogg, .shn, .ape, .aac, .aif, .aifc, .aiff, .m4a, .pcm, .au, .l16, .wmv, .oga, .mogg, .3gp, .m4r, .raw, .wma, .caf"
           onChange={(e) => {
             handleFile(e);
           }}

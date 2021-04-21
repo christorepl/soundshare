@@ -98,14 +98,27 @@ tr td {
     font-size: 12px;
   }
 
+  .sidebar li {
+    position: relative;
+  }
+
+  li::before {
+    content: "•";
+    position: absolute;
+    color: white;
+    top: 23%;
+    left: 4%;
+    font-size: 5em;
+  }
+
   .sidebar li a {
     display: block;
     color: black;
     margin-left: 0;
     background: white;
     text-decoration: none;
-    font-size: 1.25em;
-    padding: 1em 0 1em 2em;
+    font-size: 1.5em;
+    padding: 1em 0 1em 2.5em;
   }
 
   .sidebar li[class="active"] a {
@@ -118,6 +131,11 @@ tr td {
     padding-right: 2em;
     padding-bottom: 0.5em;
     padding-top: 0.05em;
+  }
+
+  .bullet {
+    color: white;
+    font-size: 45px;
   }
 
   .mainPage {

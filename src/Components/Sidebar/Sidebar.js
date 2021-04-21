@@ -14,8 +14,9 @@ const Sidebar = ({ sidebarItems }) => {
     return (
       <li key={index} onClick={() => onTitleClick(index)} className={active}>
         <Link to={item.path}>
-          <i class="fas fa-circle fa-xs" />
-          <span className="itemName">{item.name}</span>
+          {/* <i class="fas fa-circle fa-xs" /> */}
+          {/* <span className="bullet">•</span> */}
+          <span className="itemName"> {item.name}</span>
         </Link>
       </li>
     );
