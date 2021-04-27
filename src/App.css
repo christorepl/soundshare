@@ -29,11 +29,11 @@ td {
 th {
   position: sticky;
   top: 0;
-  background: white;
+  background: #fff;
   text-align: left;
   font-weight: normal;
   font-size: 1.1rem;
-  color: black;
+  color: #000;
   position: relative;
 }
 
@@ -46,7 +46,7 @@ th:last-child {
   top: 0;
   right: 0;
   bottom: 0;
-  background: black;
+  background: #000;
   opacity: 0;
   width: 3px;
   cursor: col-resize;
@@ -65,18 +65,22 @@ th:hover .resize-handle {
 td {
   padding-top: 10px;
   padding-bottom: 10px;
-  color: #808080;
+  color: #000;
 }
 
 tr td {
   padding: 20px;
   margin-top: 10px;
-  background: white;
+  background: #fff;
+}
+
+tr[class="activated"] td {
+  background: #e0eee5;
 }
 
 @media screen and (min-width: 40em) {
   .body {
-    background-color: rgb(146, 146, 146);
+    background-color: #f3f3f3;
   }
 
   .sidebar {
@@ -92,7 +96,7 @@ tr td {
   }
 
   .sidebar ul {
-    background-color: white;
+    background-color: #fff;
     list-style: none;
     padding: 0;
     font-size: 12px;
@@ -105,7 +109,7 @@ tr td {
   li::before {
     content: "•";
     position: absolute;
-    color: white;
+    color: #fff;
     top: 23%;
     left: 4%;
     font-size: 5em;
@@ -113,28 +117,28 @@ tr td {
 
   .sidebar li a {
     display: block;
-    color: black;
+    color: #000;
     margin-left: 0;
-    background: white;
+    background: #fff;
     text-decoration: none;
     font-size: 1.5em;
     padding: 1em 0 1em 2.5em;
   }
 
   .sidebar li[class="active"] a {
-    background: green;
-    color: white;
+    background: #386a5e;
+    color: #fff;
   }
 
   .fa-circle {
-    color: white;
+    color: #fff;
     padding-right: 2em;
     padding-bottom: 0.5em;
     padding-top: 0.05em;
   }
 
   .bullet {
-    color: white;
+    color: #fff;
     font-size: 45px;
   }
 
